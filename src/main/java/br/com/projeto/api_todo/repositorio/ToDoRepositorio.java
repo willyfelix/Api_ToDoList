@@ -8,11 +8,11 @@ public interface ToDoRepositorio {
 
     List<ToDo> getAllTodos();
 
-    ToDo getTodoById(Long id);
+    ToDo getToDoById(Long id);
 
-    ToDo createTodo(ToDo todo);
+    ToDo createToDo(ToDo todo);
 
-    ToDo updateTodo(Long id, ToDo updatedTodo);
+    ToDo updateToDo(Long id, ToDo updatedTodo);
 
-    void deleteTodo(Long id);
+    void deleteToDo(Long id);
 }

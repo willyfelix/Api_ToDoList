@@ -19,7 +19,7 @@ public class ToDoRepositorioImpl implements ToDoRepositorio {
     }
 
     @Override
-    public ToDo getTodoById(Long id) {
+    public ToDo getToDoById(Long id) {
         return todos.stream()
                 .filter(todo -> todo.getId().equals(id))
                 .findFirst()
@@ -34,7 +34,7 @@ public class ToDoRepositorioImpl implements ToDoRepositorio {
     }
 
     @Override
-    public ToDo updateTodo(Long id, ToDo updatedTodo) {
+    public ToDo updateToDo(Long id, ToDo updatedTodo) {
         for (ToDo todo : todos) {
             if (todo.getId().equals(id)) {
                 todo.settitle(updatedTodo.gettitle());

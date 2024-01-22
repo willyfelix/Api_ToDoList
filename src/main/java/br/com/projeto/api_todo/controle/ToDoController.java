@@ -23,7 +23,7 @@ public class ToDoController {
 
     @GetMapping("/{id}")
     public ToDo getTodoById(@PathVariable Long id) {
-        return toDoRepositorio.getTodoById(id);
+        return toDoRepositorio.getToDoById(id);
     }
 
     @PostMapping
@@ -33,7 +33,7 @@ public class ToDoController {
 
     @PutMapping("/{id}")
     public ToDo updateToDo(@PathVariable Long id, @RequestBody ToDo updatedToDo) {
-        ToDo todoToUpdate = toDoRepositorio.getTodoById(id);
+        ToDo todoToUpdate = toDoRepositorio.getToDoById(id);
 
         if (todoToUpdate != null) {
             todoToUpdate.settitle(updatedToDo.gettitle());
